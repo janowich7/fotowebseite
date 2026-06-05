@@ -612,7 +612,7 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="#" onclick="showPage('home')">Jan<span>.</span>Photography</a>
+  <a class="nav-logo" href="#" onclick="showPage('home')">Bildblick<span>.</span></a>
   <ul class="nav-links">
     <li><button onclick="showPage('home')" class="active" id="nav-home">Start</button></li>
     <li><button onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</button></li>
@@ -650,7 +650,7 @@
       </div>
     </div>
   </div>
-  <footer>&copy; 2025 Jan Photography</footer>
+  <footer>&copy; 2025 Bildblick</footer>
 </div>
 
 <!-- PORTFOLIO -->
@@ -662,22 +662,22 @@
 
   <div class="filter-bar">
     <button class="filter-btn active" onclick="filterPortfolio('alle', this)">Alle</button>
-    <button class="filter-btn" onclick="filterPortfolio('motion', this)">Motion</button>
-    <button class="filter-btn" onclick="filterPortfolio('city', this)">Street</button>
+    <button class="filter-btn" onclick="filterPortfolio('asphalt', this)">Asphalt</button>
+    <button class="filter-btn" onclick="filterPortfolio('strasse', this)">Strasse</button>
     <button class="filter-btn" onclick="filterPortfolio('natur', this)">Natur</button>
-    <button class="filter-btn" onclick="filterPortfolio('details', this)">Details</button>
+    <button class="filter-btn" onclick="filterPortfolio('momente', this)">Momente</button>
   </div>
 
   <div class="portfolio-grid" id="portfolioGrid">
 
-    <div class="portfolio-item ph-motion" data-cat="motion">
+    <div class="portfolio-item ph-motion" data-cat="asphalt">
       <div class="portfolio-placeholder"><div class="ph-icon">🚗</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Motion</div></div></div>
+      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Asphalt</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-street wide" data-cat="street">
+    <div class="portfolio-item ph-street wide" data-cat="strasse">
       <div class="portfolio-placeholder"><div class="ph-icon">🏙️</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Street</div></div></div>
+      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Strasse</div></div></div>
     </div>
 
     <div class="portfolio-item ph-natur" data-cat="natur">
@@ -685,19 +685,19 @@
       <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-detail" data-cat="details">
+    <div class="portfolio-item ph-detail" data-cat="momente">
       <div class="portfolio-placeholder"><div class="ph-icon">🔍</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Details</div></div></div>
+      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Momente</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-motion tall" data-cat="motion">
+    <div class="portfolio-item ph-motion tall" data-cat="asphalt">
       <div class="portfolio-placeholder"><div class="ph-icon">🏍️</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Motion</div></div></div>
+      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Asphalt</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-street" data-cat="street">
+    <div class="portfolio-item ph-street" data-cat="strasse">
       <div class="portfolio-placeholder"><div class="ph-icon">🏙️</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Street</div></div></div>
+      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Strasse</div></div></div>
     </div>
 
     <div class="portfolio-item ph-natur wide" data-cat="natur">
@@ -705,18 +705,16 @@
       <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-detail" data-cat="details">
+    <div class="portfolio-item ph-detail" data-cat="momente">
       <div class="portfolio-placeholder"><div class="ph-icon">🔍</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Details</div></div></div>
+      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Momente</div></div></div>
     </div>
 
   </div>
 
-  <div class="upload-note">
-    Fotos über das Admin-Dashboard hinzufügen: <strong>deineseite.netlify.app/admin</strong>
-  </div>
 
-  <footer>&copy; 2025 Jan Photography</footer>
+
+  <footer>&copy; 2025 Bildblick</footer>
 </div>
 
 <!-- ÜBER MICH -->
@@ -729,18 +727,16 @@
       <div class="section-eyebrow">Über mich</div>
       <h2>Hallo, ich bin <span style="color:var(--rust);">Jan.</span></h2>
       <div class="about-divider"></div>
-      <p class="about-text">Ich bin 21 Jahren alt und wohne im wunderschönen Emmental. Seit 4 Jahren bin ich als Fotograf tätig und halte täglich fest, was mich bewegt.</p>
-      <p class="about-text">Fahrzeuge in Bewegung, Momente in der Stadt, das Licht in der Natur. Das Besondere liegt im Detail, und genau das suche ich.</p>
+      <p class="about-text">Mit 21 Jahren halte ich fest was mich bewegt.</p>
+      <p class="about-text">Fahrzeuge in Bewegung, Momente auf der Strasse, das Licht in der Natur. Das Besondere liegt im Detail, und genau das suche ich.</p>
       <div class="about-skills">
-        <span class="skill-tag">Motion</span>
-        <span class="skill-tag">City</span>
-        <span class="skill-tag">Natur</span>
-        <span class="skill-tag">Details</span>
+        <span class="skill-tag">Fotografie</span>
+        <span class="skill-tag">Bearbeitung</span>
         <span class="skill-tag">Bern, Schweiz</span>
       </div>
     </div>
   </div>
-  <footer>&copy; 2025 Jan Photography</footer>
+  <footer>&copy; 2025 Bildblick</footer>
 </div>
 
 <!-- KONTAKT -->
