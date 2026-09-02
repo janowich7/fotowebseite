@@ -330,27 +330,27 @@
   .filter-btn.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 
   .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
-    gap: 2px;
-    background: var(--bg3);
+    column-count: 3;
+    column-gap: 10px;
+    padding: 10px;
   }
 
+  @media (max-width: 900px) { .portfolio-grid { column-count: 2; } }
+  @media (max-width: 560px) { .portfolio-grid { column-count: 1; } }
+
   .portfolio-item {
-    aspect-ratio: 4/3;
     background: var(--bg2);
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    break-inside: avoid;
+    margin-bottom: 10px;
+    display: block;
   }
-
-  .portfolio-item.tall { aspect-ratio: 3/4; }
-  .portfolio-item.wide { grid-column: span 2; aspect-ratio: 16/9; }
 
   .portfolio-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
   }
 
@@ -400,6 +400,38 @@
   .ph-natur  { background: #C8D4B8; }
   .ph-x { background: var(--bg3); }
   .ph-detail { background: #DACED8; }
+
+
+  /* LIGHTBOX */
+  #lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20,17,12,0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+  #lightbox.open { display: flex; }
+  #lightbox img {
+    max-width: 92vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    box-shadow: 0 10px 60px rgba(0,0,0,0.5);
+  }
+  #lightbox .lb-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.6rem;
+    color: #F8F4EE;
+    font-size: 2.2rem;
+    line-height: 1;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+  }
 
   .upload-note {
     padding: 1.5rem 2.5rem;
@@ -881,54 +913,29 @@
 
   <div class="portfolio-grid" id="portfolioGrid">
 
-    <div class="portfolio-item ph-x" data-cat="asphalt">
-      <div class="portfolio-placeholder"><div class="ph-icon">🚗</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Asphalt</div></div></div>
-    </div>
-
-    <div class="portfolio-item wide" data-cat="natur">
+    <div class="portfolio-item" data-cat="natur" onclick="openLightbox('bilder/natur1.jpg')">
       <img src="bilder/natur1.jpg" loading="lazy" alt="Natur">
       <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-x" data-cat="stadt">
-      <div class="portfolio-placeholder"><div class="ph-icon">🏙️</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Stadt</div></div></div>
-    </div>
-
-    <div class="portfolio-item" data-cat="natur">
+    <div class="portfolio-item" data-cat="natur" onclick="openLightbox('bilder/natur2.jpg')">
       <img src="bilder/natur2.jpg" loading="lazy" alt="Natur">
       <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
-    <div class="portfolio-item" data-cat="natur">
+    <div class="portfolio-item" data-cat="natur" onclick="openLightbox('bilder/natur6.jpg')">
       <img src="bilder/natur6.jpg" loading="lazy" alt="Natur">
       <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-x" data-cat="momente">
-      <div class="portfolio-placeholder"><div class="ph-icon">📷</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Momente</div></div></div>
-    </div>
-
-    <div class="portfolio-item wide" data-cat="natur">
+    <div class="portfolio-item" data-cat="natur" onclick="openLightbox('bilder/natur9.jpg')">
       <img src="bilder/natur9.jpg" loading="lazy" alt="Natur">
       <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-x tall" data-cat="asphalt">
-      <div class="portfolio-placeholder"><div class="ph-icon">🏍️</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Asphalt</div></div></div>
-    </div>
-
-    <div class="portfolio-item" data-cat="natur">
+    <div class="portfolio-item" data-cat="natur" onclick="openLightbox('bilder/natur10.jpg')">
       <img src="bilder/natur10.jpg" loading="lazy" alt="Natur">
       <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
-    </div>
-
-    <div class="portfolio-item ph-x" data-cat="stadt">
-      <div class="portfolio-placeholder"><div class="ph-icon">🏙️</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Stadt</div></div></div>
     </div>
 
   </div>
@@ -1079,6 +1086,16 @@ function closeMobile() {
   document.getElementById('mobileNav').classList.remove('open');
 }
 
+function openLightbox(src) {
+  var lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  lb.classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+
 function filterPortfolio(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -1091,5 +1108,10 @@ function handleForm() {
   alert('E-Mail wird noch eingerichtet. Ruf mich direkt an oder schreib per WhatsApp!');
 }
 </script>
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="lb-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 </body>
 </html>
