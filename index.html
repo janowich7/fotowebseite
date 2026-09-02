@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bildblick | Photography</title>
+<link rel="icon" type="image/png" href="bilder/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -54,6 +55,18 @@
     letter-spacing: 0.04em;
     color: var(--ink);
     text-decoration: none;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .nav-logo-img {
+    height: 30px;
+    width: auto;
+    display: block;
   }
 
   .nav-logo span { color: var(--rust); }
@@ -802,7 +815,7 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="#" onclick="showPage('home')">Bildblick<span>.</span></a>
+  <a class="nav-logo" href="#" onclick="showPage('home')"><img src="bilder/berg_transparent.png" class="nav-logo-img" alt="">Bildblick<span>.</span></a>
   <ul class="nav-links">
     <li><button onclick="showPage('home')" class="active" id="nav-home">Start</button></li>
     <li><button onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</button></li>
@@ -933,8 +946,8 @@
         <div class="team-name">Jan</div>
         <div class="team-role">Fotografie &amp; Bearbeitung</div>
         <div class="team-line"></div>
-        <p class="team-text">Mit 21 Jahren halte ich fest was mich bewegt.</p>
-        <p class="team-text">Fahrzeuge in Bewegung, Momente in der Stadt, das Licht in der Natur. Das Besondere liegt im Detail, und genau das suche ich.</p>
+        <p class="team-text">Seit bald 5 Jahren fotografiere ich und mittlerweile ist es weit mehr als nur ein Hobby.</p>
+        <p class="team-text">Am liebsten arbeite ich nah am Objekt, bei Autos, in der Natur und überall dort, wo die kleinen Details den Unterschied machen.</p>
         <div class="team-skills">
           <span class="skill-tag">Fotografie</span>
           <span class="skill-tag">Bearbeitung</span>
@@ -950,12 +963,12 @@
           <span>Foto hier</span>
         </div>
         <!-- ✏️ NAME EINTRAGEN -->
-        <div class="team-name">Name</div>
+        <div class="team-name">Nevio</div>
         <div class="team-role">Video &amp; Drohne</div>
         <div class="team-line"></div>
         <!-- ✏️ TEXT ANPASSEN -->
-        <p class="team-text">Kurzer Text über dich. Wer du bist und was dich antreibt.</p>
-        <p class="team-text">Bewegte Bilder aus jeder Perspektive, vom Boden bis aus der Luft.</p>
+        <p class="team-text">Mit 20 Jahren sehe ich die Welt am liebsten aus der Vogelperspektive.</p>
+        <p class="team-text">Ich habe meine Lehre als Elektroinstallateur abgeschlossen, doch meine wahre Leidenschaft liegt hinter der Kamera, vor allem in der Luft. So entdecke ich bei jedem Flug etwas Neues, das ich festhalten will.</p>
         <div class="team-skills">
           <span class="skill-tag">Drohnenpilot</span>
           <span class="skill-tag">Videografie</span>
