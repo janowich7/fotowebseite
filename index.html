@@ -330,13 +330,14 @@
   .filter-btn.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 
   .portfolio-grid {
-    column-count: 3;
+    column-count: 4;
     column-gap: 10px;
     padding: 10px;
   }
 
-  @media (max-width: 900px) { .portfolio-grid { column-count: 2; } }
-  @media (max-width: 560px) { .portfolio-grid { column-count: 1; } }
+  @media (max-width: 1100px) { .portfolio-grid { column-count: 3; } }
+  @media (max-width: 760px)  { .portfolio-grid { column-count: 2; } }
+  @media (max-width: 480px)  { .portfolio-grid { column-count: 1; } }
 
   .portfolio-item {
     background: var(--bg2);
