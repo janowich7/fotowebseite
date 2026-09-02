@@ -398,6 +398,7 @@
   .ph-motion { background: #BACAD2; }
   .ph-street { background: #C8C0AE; }
   .ph-natur  { background: #C8D4B8; }
+  .ph-x { background: var(--bg3); }
   .ph-detail { background: #DACED8; }
 
   .upload-note {
@@ -880,44 +881,54 @@
 
   <div class="portfolio-grid" id="portfolioGrid">
 
-    <div class="portfolio-item ph-motion" data-cat="asphalt">
+    <div class="portfolio-item ph-x" data-cat="asphalt">
       <div class="portfolio-placeholder"><div class="ph-icon">🚗</div><span>Foto einfügen</span></div>
       <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Asphalt</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-street wide" data-cat="stadt">
+    <div class="portfolio-item wide" data-cat="natur">
+      <img src="bilder/natur1.jpg" loading="lazy" alt="Natur">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
+    </div>
+
+    <div class="portfolio-item ph-x" data-cat="stadt">
       <div class="portfolio-placeholder"><div class="ph-icon">🏙️</div><span>Foto einfügen</span></div>
       <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Stadt</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-natur" data-cat="natur">
-      <div class="portfolio-placeholder"><div class="ph-icon">🌿</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Natur</div></div></div>
+    <div class="portfolio-item" data-cat="natur">
+      <img src="bilder/natur2.jpg" loading="lazy" alt="Natur">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-detail" data-cat="momente">
-      <div class="portfolio-placeholder"><div class="ph-icon">🔍</div><span>Foto einfügen</span></div>
+    <div class="portfolio-item" data-cat="natur">
+      <img src="bilder/natur6.jpg" loading="lazy" alt="Natur">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
+    </div>
+
+    <div class="portfolio-item ph-x" data-cat="momente">
+      <div class="portfolio-placeholder"><div class="ph-icon">📷</div><span>Foto einfügen</span></div>
       <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Momente</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-motion tall" data-cat="asphalt">
+    <div class="portfolio-item wide" data-cat="natur">
+      <img src="bilder/natur9.jpg" loading="lazy" alt="Natur">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
+    </div>
+
+    <div class="portfolio-item ph-x tall" data-cat="asphalt">
       <div class="portfolio-placeholder"><div class="ph-icon">🏍️</div><span>Foto einfügen</span></div>
       <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Asphalt</div></div></div>
     </div>
 
-    <div class="portfolio-item ph-street" data-cat="stadt">
+    <div class="portfolio-item" data-cat="natur">
+      <img src="bilder/natur10.jpg" loading="lazy" alt="Natur">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
+    </div>
+
+    <div class="portfolio-item ph-x" data-cat="stadt">
       <div class="portfolio-placeholder"><div class="ph-icon">🏙️</div><span>Foto einfügen</span></div>
       <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Stadt</div></div></div>
-    </div>
-
-    <div class="portfolio-item ph-natur wide" data-cat="natur">
-      <div class="portfolio-placeholder"><div class="ph-icon">🌿</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Natur</div></div></div>
-    </div>
-
-    <div class="portfolio-item ph-detail" data-cat="momente">
-      <div class="portfolio-placeholder"><div class="ph-icon">🔍</div><span>Foto einfügen</span></div>
-      <div class="portfolio-overlay"><div><div class="portfolio-label">Titel</div><div class="portfolio-sub">Momente</div></div></div>
     </div>
 
   </div>
@@ -958,9 +969,7 @@
       <!-- ===== PERSON 2: NAME NOCH OFFEN ===== -->
       <div class="team-card">
         <div class="team-photo">
-          <!-- ✏️ FOTO VON PERSON 2: <img src="bilder/name.jpg"> -->
-          <div class="ph-icon" style="width:60px;height:60px;font-size:2rem;">📷</div>
-          <span>Foto hier</span>
+          <img src="bilder/navio.png" alt="Nevio">
         </div>
         <!-- ✏️ NAME EINTRAGEN -->
         <div class="team-name">Nevio</div>
