@@ -939,6 +939,71 @@
       <div class="portfolio-overlay"><div><div class="portfolio-sub">Natur</div></div></div>
     </div>
 
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto1.jpg')">
+      <img src="bilder/auto1.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto2.jpg')">
+      <img src="bilder/auto2.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto3.jpg')">
+      <img src="bilder/auto3.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto6.jpg')">
+      <img src="bilder/auto6.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto7.jpg')">
+      <img src="bilder/auto7.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto8.jpg')">
+      <img src="bilder/auto8.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto9.jpg')">
+      <img src="bilder/auto9.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto10.jpg')">
+      <img src="bilder/auto10.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto12.jpg')">
+      <img src="bilder/auto12.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto13.jpg')">
+      <img src="bilder/auto13.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto14.jpg')">
+      <img src="bilder/auto14.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto15.jpg')">
+      <img src="bilder/auto15.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
+    <div class="portfolio-item" data-cat="asphalt" onclick="openLightbox('bilder/auto16.jpg')">
+      <img src="bilder/auto16.jpg" loading="lazy" alt="Asphalt">
+      <div class="portfolio-overlay"><div><div class="portfolio-sub">Asphalt</div></div></div>
+    </div>
+
   </div>
 
 
@@ -1086,6 +1151,18 @@ function toggleMobile() {
 function closeMobile() {
   document.getElementById('mobileNav').classList.remove('open');
 }
+
+function shufflePortfolio() {
+  var grid = document.getElementById('portfolioGrid');
+  if (!grid) return;
+  var items = Array.prototype.slice.call(grid.children);
+  for (var i = items.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    grid.appendChild(items[j]);
+    items.splice(j, 1);
+  }
+}
+document.addEventListener('DOMContentLoaded', shufflePortfolio);
 
 function openLightbox(src) {
   var lb = document.getElementById('lightbox');
